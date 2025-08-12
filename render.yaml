@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: hospital-backend
+    env: node
+    plan: free
+    rootDir: backend  # 👈 This tells Render to look inside /backend
+    buildCommand: npm install
+    startCommand: npm start
+    envVars:
+      - key: MONGO_URI
+        value: mongodb+srv://HospitalAdmin:Harisha@cluster0.mp7eayh.mongodb.net/hospital_management?retryWrites=true&w=majority&appName=Cluster0
+      - key: JWT_SECRET_KEY
+        value: hdsdskjhdskjfhdskj
+      - key: CLOUDINARY_CLOUD_NAME
+        value: drjx2lin3
+      - key: CLOUDINARY_API_KEY
+        value: 314269573824643
+      - key: CLOUDINARY_API_SECRET
+        value: r-iv94mCIBfRGm39RlBxIcBO_Yc
